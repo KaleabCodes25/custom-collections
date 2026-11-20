@@ -13,8 +13,13 @@ public class FixedList<T> {
         this.items = new ArrayList<>();
     }
 
-    public <T> void add(T item) {
+    public void add(T item) {
 
+        if(items.size()< maxSize){
+            items.add(item);
+        }else{
+            System.out.println("List is full, can't add anymore!!");
+        }
 
     }
 
